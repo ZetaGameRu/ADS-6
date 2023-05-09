@@ -5,16 +5,16 @@
 
 template<typename T, int size>
 class TPQueue {
- private:
+  private:
     T* arr;
     int sizeTPQ;
     int first, last;
     int cur;
 
- public:
-   TPQueue():sizeTPQ(size), first(0), last(0), cur(0) {
+  public:
+    TPQueue():sizeTPQ(size), first(0), last(0), cur(0) {
        arr = new T[sizeTPQ + 1];
-   };
+};
 
     ~TPQueue() {
         delete[] arr;
@@ -25,7 +25,7 @@ class TPQueue {
         if (cur == 0) {
             arr[last++] = value;
             cur++;
-       } else {
+        } else {
             int i = last - 1;
             bool op = 0;
             ////////////
@@ -45,7 +45,7 @@ class TPQueue {
         if (last > sizeTPQ) {
             last -= sizeTPQ + 1;
         }
-    }
+   }
         const T& pop() {
         assert(cur > 0);
         cur--;
