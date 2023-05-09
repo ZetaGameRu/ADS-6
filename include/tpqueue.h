@@ -14,7 +14,7 @@ class TPQueue {
  public:
    TPQueue():sizeTPQ(size), first(0), last(0), cur(0) {
        arr = new T[sizeTPQ + 1];
-};
+   };
 
     ~TPQueue() {
         delete[] arr;
